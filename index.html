@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pizzeria Menu</title>
+  </head>
+  <body>
+    <h1>Create your own Pizza</h1>
+    <div class="container">
+      <form id="pizzaForm">
+        <label for="name">Pizza name:</label>
+        <input type="text" id="name" required maxlength="30" placeholder="Neapolitan Pizza"/>
+
+        <label for="price">Pizza price:</label>
+        <input
+          type="number"
+          id="price"
+          required
+          min="0"
+          placeholder="0.00"
+          step=".01"
+        />
+        <label for="heat">Pizza heat:</label>
+        <input type="number" id="heat" min="1" max="3" placeholder="1-3" />
+
+        <label for="toppings">Pizza toppings:</label>
+        <input
+          type="text"
+          id="toppings"
+          required
+          minlength="2"
+          placeholder="Add atleast 2 toppings: 'Cheese Broccoli'"
+          pattern="(\w.+\s).+"
+        />
+
+        <fieldset id="pizzaFieldset">
+          <legend>Choose pizza</legend>
+          <input type="radio" id="pizza1" name="radioPizza" value="1" />
+          <label for="pizza1">
+            <img src="images/pizza1.png" alt="Pizza with cucumbers"
+          /></label>
+          <input type="radio" id="pizza2" name="radioPizza" value="2" />
+          <label for="pizza2">
+            <img src="images/pizza2.png" alt="Pizza with cheese"
+          /></label>
+          <input type="radio" id="pizza3" name="radioPizza" value="3" />
+          <label for="pizza3">
+            <img src="images/pizza3.png" alt="Pizza with broccoli"
+          /></label>
+          <input type="radio" id="pizza4" name="radioPizza" value="4" />
+          <label for="pizza4">
+            <img src="images/pizza4.png" alt="Pizza with tomatoes"
+          /></label>
+        </fieldset>
+
+        <input type="submit" value="Add new pizza" />
+      </form>
+      <h1>Pizzeria Menu</h1>
+      <div class="sortContainer">
+        <button onclick="sortArray(1)">Sort by name</button>
+        <button onclick="sortArray(2)">Sort by price</button>
+        <button onclick="sortArray(3)">Sort by heat</button>
+      </div>
+
+      <ul id="pizzaMenu"></ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

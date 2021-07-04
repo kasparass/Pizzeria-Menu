@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  font-family: Georgia, serif;
+}
+
+body {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+label {
+  margin: 10px 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 50%;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  width: 90vw;
+}
+
+fieldset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+fieldset label {
+  margin: 0 10px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  margin: 10px 0;
+}
+
+ul li img {
+  width: 18%;
+  float: left;
+  border: 2px solid #ddd;
+}
+
+.infoContainer {
+  width: 82%;
+  float: left;
+  padding-left: 30px;
+  position: relative;
+  align-items: stretch;
+}
+
+.infoContainer img {
+  width: 25px;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 5px;
+}
+
+.sortContainer {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+
+.sortContainer button {
+    flex: 1;
+    padding: 20px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+}
+
+.infoContainer img + img {
+  right: 30px;
+}
+.infoContainer img + img + img {
+  right: 60px;
+}
+
+.priceContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+input[type='text'],
+input[type='number'] {
+  padding: 10px;
+}
+
+input[type='submit'] {
+  margin: 20px 0;
+  padding: 15px;
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  fieldset {
+    flex-direction: column;
+  }
+  img {
+    max-height: 300px;
+    max-width: 300px;
+  }
+
+  fieldset label {
+    margin: 10px 0;
+  }
+}
